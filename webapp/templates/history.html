@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediScan AI — Prediction History</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+    <!-- Navbar -->
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container">
+            <span class="navbar-brand mb-0 h1">🩻 MediScan AI</span>
+            <div class="d-flex">
+                <a href="/" class="btn btn-outline-light me-2">Diagnosis</a>
+                <a href="/history" class="btn btn-outline-light active">History Log</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="container my-5">
+        <div class="card shadow-sm">
+            <div class="card-header bg-dark text-white">Prediction History Log</div>
+            <div class="card-body">
+                {% if records %}
+                    <div class="table-responsive">
+                        <table class="table table-striped table-hover align-middle">
+                            <thead class="table-light">
+                                <tr>
+                                    <th>Timestamp</th>
+                                    <th>Filename</th>
+                                    <th>Diagnosis Decision</th>
+                                    <th>Confidence Score</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for record in records %}
+                                    <tr>
+                                        <td>{{ record.timestamp }}</td>
+                                        <td>{{ record.filename }}</td>
+                                        <td>
+                                            <span class="badge {% if record.diagnosis == 'PNEUMONIA' %}bg-danger{% else %}bg-success{% endif %}">
+                                                {{ record.diagnosis }}
+                                            </span>
+                                        </td>
+                                        <td>{{ record.confidence }}</td>
+                                    </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                {% else %}
+                    <div class="text-center text-muted py-5">
+                        <p>No logged predictions found. Run some analysis first to populate history.</p>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</body>
+</html>

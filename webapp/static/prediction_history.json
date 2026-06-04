@@ -1,0 +1,38 @@
+[
+    {
+        "timestamp": "2026-06-04 11:54:09",
+        "filename": "IM-0128-0001.jpeg",
+        "diagnosis": "PNEUMONIA",
+        "confidence": "99.68%"
+    },
+    {
+        "timestamp": "2026-06-04 11:53:58",
+        "filename": "IM-0117-0001.jpeg",
+        "diagnosis": "NORMAL",
+        "confidence": "52.68%"
+    },
+    {
+        "timestamp": "2026-06-04 11:53:45",
+        "filename": "IM-0115-0001.jpeg",
+        "diagnosis": "NORMAL",
+        "confidence": "99.34%"
+    },
+    {
+        "timestamp": "2026-06-04 11:53:35",
+        "filename": "IM-0128-0001.jpeg",
+        "diagnosis": "PNEUMONIA",
+        "confidence": "99.68%"
+    },
+    {
+        "timestamp": "2026-06-04 11:53:22",
+        "filename": "IM-0122-0001.jpeg",
+        "diagnosis": "NORMAL",
+        "confidence": "97.02%"
+    },
+    {
+        "timestamp": "2026-06-04 11:53:21",
+        "filename": "IM-0122-0001.jpeg",
+        "diagnosis": "NORMAL",
+        "confidence": "97.02%"
+    }
+]

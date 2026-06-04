@@ -1,0 +1,10 @@
+tensorflow>=2.12.0
+flask>=2.3.0
+streamlit>=1.24.0
+opencv-python-headless
+numpy<2.0.0
+pandas
+matplotlib
+scikit-learn
+fpdf2
+pillow
